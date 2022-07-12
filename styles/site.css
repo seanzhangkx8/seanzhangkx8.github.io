@@ -1,0 +1,124 @@
+/* styles for all pages */
+body {
+  background-color: #cbc4c4;
+}
+
+h1 {
+  color: white;
+  background-color: #444444;
+  font-family: Times New Romans, Sans-serif;
+  font-size: 200%;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  color: #000000;
+  font-family: Times New Romans, Sans-serif;
+  font-size: 120%;
+  text-align: center;
+}
+
+p {
+  color: #000000;
+  font-family: Times New Romans, Sans-serif;
+  font-size: 100%;
+}
+
+li {
+  color: #000000;
+  font-family: Times New Roman, Serif;
+  font-size: 110%;
+  display : inline;
+  padding: 20px;
+}
+
+ul {
+  display: inline-block;
+  list-style-type: none;
+  padding: 5px;
+}
+
+img {
+  display: block;
+  margin: 0px auto;
+}
+
+/* for home page only */
+
+container {
+  display: flex;
+}
+
+.Navigation {
+  text-align: center;
+  margin: 0 auto;
+}
+
+bigbox{
+  display: inline-flex;
+  height: 500px;
+}
+
+box {
+  display: flex;
+}
+
+.Image {
+  float: left;
+  padding: 10%;
+  padding-top: 40px;
+}
+
+.p {
+  text-align: center;
+  padding: 20px;
+  padding-right: 10%;
+}
+
+.info {
+  text-align: center;
+  padding: 10%;
+  padding-top: 0px;
+}
+
+/* for all three subpages (About, College, Working) */
+
+bigsubbox {
+  display: inline-block;
+}
+
+subbox {
+  display: flex;
+}
+
+.image {
+  float: left;
+  height: 300px;
+  width: 400px;
+  padding: 5%;
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+
+.navigation {
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.general {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 10%;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  align-items: center;
+}
+
+.paragraphs {
+  text-align: center;
+  justify-content: center;
+  padding: 10%;
+  padding-top: 15%;
+}
