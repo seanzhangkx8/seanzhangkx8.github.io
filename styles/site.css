@@ -103,6 +103,27 @@ img {
   max-width:100%;
 }
 
+.header {
+  display: flex;
+  align-items: center; /* This will vertically align items to the center */
+  justify-content: start; /* This will align items to the start side by side */
+  gap: 10%; /* Optional: Adds a gap between the title and the image */
+  margin: 5px;
+}
+
+.header-title {
+  margin: 0; /* Removes default margin */
+}
+
+.header-image {
+  width: 80px; /* Adjust according to your needs */
+  height: 80px; /* Same as width for a perfect circle */
+  border-radius: 50%; /* Makes the image circular */
+  border: 8px double rgb(146, 200, 251); /* Creates a single line border. Adjust '5px' as needed */
+  box-shadow: 0 0 0 2px rgb(146, 200, 251);
+  object-fit: cover; /* Ensures the image content scales correctly */
+}
+
 header {
   width:270px;
   float:left;
@@ -151,6 +172,15 @@ header ul a:hover {
 
 header ul a:active {
   background-color:#f0f0f0;
+}
+
+footer ul {
+  list-style-type: none; /* This removes the bullets from the list */
+  padding-left: 0; /* This removes any default padding that might indent the list */
+}
+
+footer li {
+  font-weight: bold; /* This makes the list items bold */
 }
 
 strong {
