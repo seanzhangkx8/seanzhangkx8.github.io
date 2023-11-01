@@ -119,7 +119,7 @@ img {
   width: 80px; /* Adjust according to your needs */
   height: 80px; /* Same as width for a perfect circle */
   border-radius: 50%; /* Makes the image circular */
-  border: 8px double rgb(146, 200, 251); /* Creates a single line border. Adjust '5px' as needed */
+  border: 2px double rgb(146, 200, 251); /* Creates a single line border. Adjust '5px' as needed */
   box-shadow: 0 0 0 2px rgb(146, 200, 251);
   object-fit: cover; /* Ensures the image content scales correctly */
 }
