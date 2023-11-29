@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(240, 249, 251);
+  background-color: rgb(251, 254, 255);
   font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 369;
   color: #201b1b;
@@ -103,27 +103,6 @@ img {
   max-width:100%;
 }
 
-.header {
-  display: flex;
-  align-items: center; /* This will vertically align items to the center */
-  justify-content: start; /* This will align items to the start side by side */
-  gap: 10%; /* Optional: Adds a gap between the title and the image */
-  margin: 5px;
-}
-
-.header-title {
-  margin: 0; /* Removes default margin */
-}
-
-.header-image {
-  width: 80px; /* Adjust according to your needs */
-  height: 80px; /* Same as width for a perfect circle */
-  border-radius: 50%; /* Makes the image circular */
-  border: 2px double rgb(146, 200, 251); /* Creates a single line border. Adjust '5px' as needed */
-  box-shadow: 0 0 0 2px rgb(146, 200, 251);
-  object-fit: cover; /* Ensures the image content scales correctly */
-}
-
 header {
   width:270px;
   float:left;
@@ -172,6 +151,28 @@ header ul a:hover {
 
 header ul a:active {
   background-color:#f0f0f0;
+}
+
+.header {
+  display: flex;
+  align-items: center; /* This will vertically align items to the center */
+  justify-content: start; /* This will align items to the start side by side */
+  gap: 10%; /* Optional: Adds a gap between the title and the image */
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
+.header-title {
+  margin: 0; /* Removes default margin */
+}
+
+.header-image {
+  width: 80px; /* Adjust according to your needs */
+  height: 80px; /* Same as width for a perfect circle */
+  border-radius: 50%; /* Makes the image circular */
+  border: 2px double rgb(146, 200, 251); /* Creates a single line border. Adjust '5px' as needed */
+  box-shadow: 0 0 0 2px rgb(146, 200, 251);
+  object-fit: cover; /* Ensures the image content scales correctly */
 }
 
 footer ul {
