@@ -3,50 +3,66 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Fun Things</title>
+    <title>Sean Zhang - Fun</title>
 
-    <link rel="stylesheet" href="styles/site.css">
-    <link rel="stylesheet" href="styles/pygment_trac.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
     <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="images/funkirby.jpg" type="image/x-icon">
+    <style>
+      img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 10pt;
+      }
+    </style>
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Fun Things!</h1>
-        <p><a href="index.html">Back to main page</a></p>
-      </header>
-      <section id="thanksgiving23">
-        <h2>2023 Thanksgiving</h2>
-        <p>Thanksgiving 2023, I visited Long Island and Brooklyn. I also went to concert by <a href="https://en.wikipedia.org/wiki/Omnipotent_Youth_Society">万能青年旅店(Omnipotent Youth Society)</a>, <a href="https://zh.wikipedia.org/zh-hans/%E7%97%9B%E4%BB%B0%E4%B9%90%E9%98%9F">痛仰乐队(Miserable Faith)</a>, <a href="https://zh.wikipedia.org/zh-cn/%E4%BA%94%E6%9D%A1%E4%BA%BA">五条人(Wu Tiao Ren)</a>, <a href="https://zh.wikipedia.org/zh-hans/%E6%88%BF%E6%9D%B1%E7%9A%84%E8%B2%93">房东的猫(The Landlord's Cats)</a>.</p>
-        <img src="image/thanksgiving23/1.png" alt="Thanksgiving 23 Pic 1" width="400">
-        <img src="image/thanksgiving23/2.png" alt="Thanksgiving 23 Pic 2" width="400">
-        <img src="image/thanksgiving23/3.png" alt="Thanksgiving 23 Pic 3" width="400">
-        <img src="image/thanksgiving23/4.jpg" alt="Thanksgiving 23 Pic 4" width="400">
-        <img src="image/thanksgiving23/5.jpg" alt="Thanksgiving 23 Pic 5" width="400">
-        <img src="image/thanksgiving23/6.jpg" alt="Thanksgiving 23 Pic 6" width="400">
-      </section>
-      <section id="fall23beebe">
-        <h2>2023 Fall Time</h2>
-        <p>10/05/23, Early fall pictures taken at Beebe Lake, Cornell.</p>
-        <img src="image/fall23beebe/1.jpg" alt="Fall 23 Beebe Lake 1" width="400">
-        <img src="image/fall23beebe/2.jpg" alt="Fall 23 Beebe Lake 2" width="400">
-        <img src="image/fall23beebe/3.jpg" alt="Fall 23 Beebe Lake 3" width="400">
-        <img src="image/fall23beebe/4.jpg" alt="Fall 23 Beebe Lake 4" width="400">
-        <img src="image/fall23beebe/5.jpg" alt="Fall 23 Beebe Lake 5" width="400">
-      </section>
-      <section id="sp23mexico">
-        <h2>2023 Trip to Mexico</h2>
-        <p>April 2023, trip to Ciudad de México with Anastasia</p>
-        <img src="image/sp23mexico/1.JPG" alt="Mexico Trip 1" width="400">
-        <img src="image/sp23mexico/2.JPG" alt="Mexico Trip 2" width="400">
-        <img src="image/sp23mexico/3.JPG" alt="Mexico Trip 3" width="400">
-        <img src="image/sp23mexico/4.JPG" alt="Mexico Trip 4" width="400">
-        <img src="image/sp23mexico/5.JPG" alt="Mexico Trip 5" width="400">
-        <p></p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+      <h1>Fun Things!</h1>
+      <p style="text-align: center;"><a href="index.html">Back to main</a></p>
+      <audio id="music-player" src="audio.mp3"></audio>
+      <button id="music-button" onclick="toggleMusic()" style="display: block; margin-left: auto; margin-right: auto;">Don't Stop My Music</button>
+      <script>
+          function toggleMusic() {
+              var music = document.getElementById("music-player");
+              var button = document.getElementById("music-button");
+
+              if (music.paused) {
+                  music.volume = 0.1;
+                  music.play();
+                  button.textContent = "Stop My Music";
+              } else {
+                  music.pause();
+                  button.textContent = "Don't Stop My Music";
+              }
+          }
+      </script>
+      
+      <h2>2023 Thanksgiving</h2>
+      <p>Thanksgiving 2023, I visited Long Island and Brooklyn. I also went to concert by <a href="https://en.wikipedia.org/wiki/Omnipotent_Youth_Society">万能青年旅店(Omnipotent Youth Society)</a>, <a href="https://zh.wikipedia.org/zh-hans/%E7%97%9B%E4%BB%B0%E4%B9%90%E9%98%9F">痛仰乐队(Miserable Faith)</a>, <a href="https://zh.wikipedia.org/zh-cn/%E4%BA%94%E6%9D%A1%E4%BA%BA">五条人(Wu Tiao Ren)</a>, <a href="https://zh.wikipedia.org/zh-hans/%E6%88%BF%E6%9D%B1%E7%9A%84%E8%B2%93">房东的猫(The Landlord's Cats)</a>.</p>
+      <img src="image/thanksgiving23/1.png" alt="Thanksgiving 23 Pic 1" width="400">
+      <img src="image/thanksgiving23/2.png" alt="Thanksgiving 23 Pic 2" width="400">
+      <img src="image/thanksgiving23/3.png" alt="Thanksgiving 23 Pic 3" width="400">
+      <img src="image/thanksgiving23/4.jpg" alt="Thanksgiving 23 Pic 4" width="400">
+      <img src="image/thanksgiving23/5.jpg" alt="Thanksgiving 23 Pic 5" width="400">
+      <img src="image/thanksgiving23/6.jpg" alt="Thanksgiving 23 Pic 6" width="400">
+
+      <h2>2023 Fall Time</h2>
+      <p>10/05/23, Early fall pictures taken at Beebe Lake, Cornell.</p>
+      <img src="image/fall23beebe/1.jpg" alt="Fall 23 Beebe Lake 1" width="400">
+      <img src="image/fall23beebe/2.jpg" alt="Fall 23 Beebe Lake 2" width="400">
+      <img src="image/fall23beebe/3.jpg" alt="Fall 23 Beebe Lake 3" width="400">
+      <img src="image/fall23beebe/4.jpg" alt="Fall 23 Beebe Lake 4" width="400">
+      <img src="image/fall23beebe/5.jpg" alt="Fall 23 Beebe Lake 5" width="400">
+
+      <h2>2023 Trip to Mexico</h2>
+      <p>April 2023, trip to Ciudad de México with Anastasia</p>
+      <img src="image/sp23mexico/1.JPG" alt="Mexico Trip 1" width="400">
+      <img src="image/sp23mexico/2.JPG" alt="Mexico Trip 2" width="400">
+      <img src="image/sp23mexico/3.JPG" alt="Mexico Trip 3" width="400">
+      <img src="image/sp23mexico/4.JPG" alt="Mexico Trip 4" width="400">
+      <img src="image/sp23mexico/5.JPG" alt="Mexico Trip 5" width="400">
+
     </div>
     <script src="javascripts/scale.fix.js"></script>
   </body>
