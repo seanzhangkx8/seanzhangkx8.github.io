@@ -18,52 +18,56 @@
     </style>
   </head>
   <body>
-      <h1>Fun Things!</h1>
-      <p style="text-align: center;"><a href="index.html">Back to main</a></p>
-      <audio id="music-player" src="audio.mp3"></audio>
-      <button id="music-button" onclick="toggleMusic()" style="display: block; margin-left: auto; margin-right: auto;">Don't Stop My Music</button>
-      <script>
-          function toggleMusic() {
-              var music = document.getElementById("music-player");
-              var button = document.getElementById("music-button");
+    <h1>Fun Things!</h1>
+    <p style="text-align: center;"><a href="index.html">Back to main</a></p>
+    <audio id="music-player" src="audio.mp3"></audio>
+    <button id="music-button" onclick="toggleMusic()" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10pt; margin-bottom: 10pt;">Don't Stop My Music</button>
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("music-player");
+            var button = document.getElementById("music-button");
 
-              if (music.paused) {
-                  music.volume = 0.1;
-                  music.play();
-                  button.textContent = "Stop Music";
-              } else {
-                  music.pause();
-                  button.textContent = "Don't Stop My Music";
-              }
-          }
-      </script>
-      
-      <h2>2023 Thanksgiving</h2>
-      <p>Thanksgiving 2023, I visited Long Island and Brooklyn. I also went to concert by <a href="https://en.wikipedia.org/wiki/Omnipotent_Youth_Society">万能青年旅店(Omnipotent Youth Society)</a>, <a href="https://zh.wikipedia.org/zh-hans/%E7%97%9B%E4%BB%B0%E4%B9%90%E9%98%9F">痛仰乐队(Miserable Faith)</a>, <a href="https://zh.wikipedia.org/zh-cn/%E4%BA%94%E6%9D%A1%E4%BA%BA">五条人(Wu Tiao Ren)</a>, <a href="https://zh.wikipedia.org/zh-hans/%E6%88%BF%E6%9D%B1%E7%9A%84%E8%B2%93">房东的猫(The Landlord's Cats)</a>.</p>
-      <img src="image/thanksgiving23/1.png" alt="Thanksgiving 23 Pic 1" width="400">
-      <img src="image/thanksgiving23/2.png" alt="Thanksgiving 23 Pic 2" width="400">
-      <img src="image/thanksgiving23/3.png" alt="Thanksgiving 23 Pic 3" width="400">
-      <img src="image/thanksgiving23/4.jpg" alt="Thanksgiving 23 Pic 4" width="400">
-      <img src="image/thanksgiving23/5.jpg" alt="Thanksgiving 23 Pic 5" width="400">
-      <img src="image/thanksgiving23/6.jpg" alt="Thanksgiving 23 Pic 6" width="400">
+            if (music.paused) {
+                music.volume = 0.1;
+                music.play();
+                button.textContent = "Stop Music";
+            } else {
+                music.pause();
+                button.textContent = "Don't Stop My Music";
+            }
+        }
+    </script>
+    <button id="dark-mode-toggle" style="display: block; margin-left: auto; margin-right: auto;">Dark Mode</button>
+    <script>
+      const darkModeToggle = document.getElementById('dark-mode-toggle')
+      darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('latex-dark')
+      })
+    </script>
+    
+    <h2>2023 Thanksgiving</h2>
+    <p>Thanksgiving 2023, I visited Long Island and Brooklyn. I also went to concert by <a href="https://en.wikipedia.org/wiki/Omnipotent_Youth_Society">万能青年旅店(Omnipotent Youth Society)</a>, <a href="https://zh.wikipedia.org/zh-hans/%E7%97%9B%E4%BB%B0%E4%B9%90%E9%98%9F">痛仰乐队(Miserable Faith)</a>, <a href="https://zh.wikipedia.org/zh-cn/%E4%BA%94%E6%9D%A1%E4%BA%BA">五条人(Wu Tiao Ren)</a>, <a href="https://zh.wikipedia.org/zh-hans/%E6%88%BF%E6%9D%B1%E7%9A%84%E8%B2%93">房东的猫(The Landlord's Cats)</a>.</p>
+    <img src="image/thanksgiving23/1.png" alt="Thanksgiving 23 Pic 1" width="400">
+    <img src="image/thanksgiving23/2.png" alt="Thanksgiving 23 Pic 2" width="400">
+    <img src="image/thanksgiving23/3.png" alt="Thanksgiving 23 Pic 3" width="400">
+    <img src="image/thanksgiving23/4.jpg" alt="Thanksgiving 23 Pic 4" width="400">
+    <img src="image/thanksgiving23/5.jpg" alt="Thanksgiving 23 Pic 5" width="400">
+    <img src="image/thanksgiving23/6.jpg" alt="Thanksgiving 23 Pic 6" width="400">
 
-      <h2>2023 Fall Time</h2>
-      <p>10/05/23, Early fall pictures taken at Beebe Lake, Cornell.</p>
-      <img src="image/fall23beebe/1.jpg" alt="Fall 23 Beebe Lake 1" width="400">
-      <img src="image/fall23beebe/2.jpg" alt="Fall 23 Beebe Lake 2" width="400">
-      <img src="image/fall23beebe/3.jpg" alt="Fall 23 Beebe Lake 3" width="400">
-      <img src="image/fall23beebe/4.jpg" alt="Fall 23 Beebe Lake 4" width="400">
-      <img src="image/fall23beebe/5.jpg" alt="Fall 23 Beebe Lake 5" width="400">
+    <h2>2023 Fall Time</h2>
+    <p>10/05/23, Early fall pictures taken at Beebe Lake, Cornell.</p>
+    <img src="image/fall23beebe/1.jpg" alt="Fall 23 Beebe Lake 1" width="400">
+    <img src="image/fall23beebe/2.jpg" alt="Fall 23 Beebe Lake 2" width="400">
+    <img src="image/fall23beebe/3.jpg" alt="Fall 23 Beebe Lake 3" width="400">
+    <img src="image/fall23beebe/4.jpg" alt="Fall 23 Beebe Lake 4" width="400">
+    <img src="image/fall23beebe/5.jpg" alt="Fall 23 Beebe Lake 5" width="400">
 
-      <h2>2023 Trip to Mexico</h2>
-      <p>April 2023, trip to Ciudad de México with Anastasia</p>
-      <img src="image/sp23mexico/1.JPG" alt="Mexico Trip 1" width="400">
-      <img src="image/sp23mexico/2.JPG" alt="Mexico Trip 2" width="400">
-      <img src="image/sp23mexico/3.JPG" alt="Mexico Trip 3" width="400">
-      <img src="image/sp23mexico/4.JPG" alt="Mexico Trip 4" width="400">
-      <img src="image/sp23mexico/5.JPG" alt="Mexico Trip 5" width="400">
-
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <h2>2023 Trip to Mexico</h2>
+    <p>April 2023, trip to Ciudad de México with Anastasia</p>
+    <img src="image/sp23mexico/1.JPG" alt="Mexico Trip 1" width="400">
+    <img src="image/sp23mexico/2.JPG" alt="Mexico Trip 2" width="400">
+    <img src="image/sp23mexico/3.JPG" alt="Mexico Trip 3" width="400">
+    <img src="image/sp23mexico/4.JPG" alt="Mexico Trip 4" width="400">
+    <img src="image/sp23mexico/5.JPG" alt="Mexico Trip 5" width="400">
   </body>
 </html>

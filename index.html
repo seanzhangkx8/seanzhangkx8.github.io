@@ -12,6 +12,14 @@
   <body>
     <h1>Kaixiang (Sean) Zhang</h1>
 
+    <button id="dark-mode-toggle" style="display: block; margin-left: auto; margin-right: auto;">Dark Mode</button>
+    <script>
+      const darkModeToggle = document.getElementById('dark-mode-toggle')
+      darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('latex-dark')
+      })
+    </script>
+
     <div class="abstract">
       <h2>Abstract</h2>
       <p>
