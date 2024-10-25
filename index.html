@@ -8,13 +8,35 @@
     <link rel="stylesheet" href="https://latex.vercel.app/style.css">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="image/kirby.png" type="image/x-icon">
+
+    <style>
+      .dark-mode-toggle-container {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+      }
+
+      /* Styling for mobile devices */
+      @media (max-width: 650px) {
+          h1 {
+              margin-top: 100px; /* Push the title lower */
+          }
+
+          /* .dark-mode-toggle-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+          } */
+        }
+    </style>
+
   </head>
   <body>
     <h1>Kaixiang (Sean) Zhang</h1>
 
-    <div style="position: absolute; top: 20px; right: 20px;">
+    <div class="dark-mode-toggle-container">
       <img id="dark-mode-toggle" src="art/sun.png" alt="Toggle Dark Mode" style="cursor: pointer; width: 50px; height: 50px;">
-    </div>
+  </div>
     
     <script>
       const darkModeToggle = document.getElementById('dark-mode-toggle');
