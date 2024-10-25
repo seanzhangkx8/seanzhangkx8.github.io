@@ -18,32 +18,43 @@
     </style>
   </head>
   <body>
-    <h1>Fun Things!</h1>
-    <p style="text-align: center;"><a href="index.html">Back to main</a></p>
-    <audio id="music-player" src="audio.mp3"></audio>
-    <button id="music-button" onclick="toggleMusic()" style="display: block; margin-left: auto; margin-right: auto; margin-top: 10pt; margin-bottom: 10pt;">Don't Stop My Music</button>
-    <script>
-        function toggleMusic() {
-            var music = document.getElementById("music-player");
-            var button = document.getElementById("music-button");
+    <h1>Fun Things and Good Stuff!</h1>
 
-            if (music.paused) {
-                music.volume = 0.1;
-                music.play();
-                button.textContent = "Stop Music";
-            } else {
-                music.pause();
-                button.textContent = "Don't Stop My Music";
-            }
-        }
-    </script>
-    <button id="dark-mode-toggle" style="display: block; margin-left: auto; margin-right: auto;">Dark Mode</button>
+    <div style="position: absolute; top: 20px; right: 20px; display: flex; align-items: center; gap: 10px;">
+      <p style="margin: 0;"><a href="index.html">Get Me Back!</a></p>
+      <img id="dark-mode-toggle" src="art/sun.png" alt="Toggle Dark Mode" style="cursor: pointer; width: 70px; height: 70px;">
+      <img id="music-button" src="art/stopmusic.png" alt="Toggle Music" style="cursor: pointer; width: 70px; height: 70px;">
+    </div>
+    
+    <audio id="music-player" src="art/audio.mp3"></audio>
+    
     <script>
-      const darkModeToggle = document.getElementById('dark-mode-toggle')
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
       darkModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('latex-dark')
-      })
+        document.body.classList.toggle('latex-dark');
+    
+        if (document.body.classList.contains('latex-dark')) {
+          darkModeToggle.src = 'art/moon.png';
+        } else {
+          darkModeToggle.src = 'art/sun.png';
+        }
+      });
+    
+      const musicPlayer = document.getElementById("music-player");
+      const musicButton = document.getElementById("music-button");
+    
+      musicButton.addEventListener('click', () => {
+        if (musicPlayer.paused) {
+          musicPlayer.volume = 0.1;
+          musicPlayer.play();
+          musicButton.src = "art/music.png";
+        } else {
+          musicPlayer.pause();
+          musicButton.src = "art/stopmusic.png";
+        }
+      });
     </script>
+    
 
     <h2>2024 Guangzhou Trip</h2>
     <p>Stayed in Guangzhou for two weeks.</p>

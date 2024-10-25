@@ -12,23 +12,47 @@
   <body>
     <h1>Kaixiang (Sean) Zhang</h1>
 
-    <button id="dark-mode-toggle" style="display: block; margin-left: auto; margin-right: auto;">Dark Mode</button>
+    <!-- <button id="dark-mode-toggle" style="display: block; margin-left: auto; margin-right: auto;">Dark Mode</button>
     <script>
       const darkModeToggle = document.getElementById('dark-mode-toggle')
       darkModeToggle.addEventListener('click', () => {
         document.body.classList.toggle('latex-dark')
       })
+    </script> -->
+
+    <div style="position: absolute; top: 20px; right: 20px;">
+      <img id="dark-mode-toggle" src="art/sun.png" alt="Toggle Dark Mode" style="cursor: pointer; width: 50px; height: 50px;">
+    </div>
+    
+    <script>
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+    
+      darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('latex-dark');
+
+        if (document.body.classList.contains('latex-dark')) {
+          darkModeToggle.src = 'art/moon.png';
+        } else {
+          darkModeToggle.src = 'art/sun.png';
+        }
+      });
     </script>
 
     <div class="abstract">
       <h2>Abstract</h2>
       <p>
-        Hello, I'm Sean Zhang (张垲翔), a first-year M.S. student in Computer Science at Cornell University. 
-        My research focuses on Natural Language Processing, with a particular focus on studying and modeling conversational behaviors and social interactions.
+        <a href="https://www.cs.cornell.edu/~cristian/memorability_files/memorability.pdf">Hello!</a> 
+        I'm Kaixiang (Sean, 张垲翔), first-year <a href="https://www.cs.cornell.edu/ms">MS</a> student in 
+        Computer Science at Cornell University. 
+        My research focuses on Natural Language Processing, 
+        with a particular focus on studying and modeling conversational behaviors and social interactions.
         I recently completed my undergraduate studies at Cornell,  
-        where I had the privilege of working with <a href="https://www.cs.cornell.edu/~cristian/">Prof. Cristian Danescu-Niculescu-Mizil</a> on conversation analysis. 
-        My undergraduate advisors are <a href="https://www.cs.cornell.edu/home/llee/">Prof. Lillian Lee</a> and <a href="https://pi.math.cornell.edu/~allenk/">Prof. Allen Knutson</a>, 
-        and I am deeply grateful for all their guidances throughout my academic journey.
+        where I had the privilege of working with 
+        <a href="https://www.cs.cornell.edu/~cristian/">Prof. Cristian Danescu-Niculescu-Mizil</a> on conversation analysis. 
+        My undergraduate advisors are <a href="https://www.cs.cornell.edu/home/llee/">Prof. Lillian Lee</a> (CS) 
+        and <a href="https://pi.math.cornell.edu/~allenk/">Prof. Allen Knutson</a> (Math), 
+        and I am deeply grateful for all their guidances (and helps from many other professors and peers) 
+        throughout my academic journey.
       </p>
     </div>
 
@@ -55,7 +79,7 @@
     <ul>
       <li>Email: <a href="mailto:kz88@cornell.edu">kz88</a></li>
       <li>Github: <a href="https://github.com/seanzhangkx8">seanzhangkx8</a></li>
-      <li>Linkedin: <a href="www.linkedin.com/in/seanzhangkx">seanzhang</a></li>
+      <!-- <li>Linkedin: <a href="www.linkedin.com/in/seanzhangkx">seanzhang</a></li> -->
       <li>Location: <a href="https://maps.app.goo.gl/LcxgBWEBCPeDhT2a9">322 Gates Hall</a></li>
     </ul>
 
