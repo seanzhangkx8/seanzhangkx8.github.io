@@ -21,12 +21,6 @@
           h1 {
               margin-top: 100px; /* Push the title lower */
           }
-
-          /* .dark-mode-toggle-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-          } */
         }
     </style>
 
@@ -54,19 +48,39 @@
 
     <div class="abstract">
       <h2>Abstract</h2>
+      
       <p>
-        Hello! I'm Kaixiang (Sean, 张垲翔), first-year <a href="https://www.cs.cornell.edu/ms">MS</a> student in 
-        Computer Science at Cornell University. 
-        My research focuses on Natural Language Processing, 
-        with a particular focus on studying and modeling conversational behaviors and social interactions.
-        I recently completed my undergraduate studies at Cornell,  
-        where I had the privilege of working with 
-        <a href="https://www.cs.cornell.edu/~cristian/">Prof. Cristian Danescu-Niculescu-Mizil</a> on conversation analysis. 
-        My undergraduate advisors are <a href="https://www.cs.cornell.edu/home/llee/">Prof. Lillian Lee</a> 
-        and <a href="https://pi.math.cornell.edu/~allenk/">Prof. Allen Knutson</a>, 
-        and I am deeply grateful for all their guidances (and helps from many other professors and peers) 
-        throughout my academic journey.
+        <span id="hello-text">Hello</span>! This is <span id="name-text">Kaixiang</span>!
       </p>
+      <p>
+        I am a first-year <a href="https://www.cs.cornell.edu/ms">M.S. student</a> in Computer Science at Cornell University, 
+        specializing in Natural Language Processing. My research focuses on studying and modeling conversational behaviors and social interactions. 
+        I am fortunate to be advised by 
+        <a href="https://www.cs.cornell.edu/~cristian/">Prof. Cristian Danescu-Niculescu-Mizil</a> and 
+        <a href="https://www.cs.cornell.edu/home/llee/">Prof. Lillian Lee</a>.
+      </p>
+      <script>
+        const greetings = ["Hello", "Bonjour", "你好", "Hola", "Guten Tag", "こんにちは", "안녕하세요"];
+        let currentIndex = 0;
+
+        function updateGreeting() {
+            const textElement = document.getElementById("hello-text");
+            textElement.textContent = greetings[currentIndex];
+            currentIndex = (currentIndex + 1) % greetings.length;
+        }
+        setInterval(updateGreeting, 3000);
+      </script>
+      <script>
+        const names = ["Sean", "张垲翔", "seanzhangkx"];
+        let currentIdx = 0;
+
+        function updatename() {
+            const textElement = document.getElementById("name-text");
+            textElement.textContent = names[currentIdx];
+            currentIdx = (currentIdx + 1) % names.length;
+        }
+        setInterval(updatename, 3000);
+      </script>
     </div>
 
     <h2>Bio</h2>
