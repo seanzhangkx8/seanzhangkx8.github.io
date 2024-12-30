@@ -1,2 +1,2 @@
-# seanzhangkx8.github.io
+# seanzhangkx.com
 Sean Zhang's Personal Website
