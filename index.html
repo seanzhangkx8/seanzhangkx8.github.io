@@ -30,7 +30,7 @@
 
     <div class="dark-mode-toggle-container">
       <img id="dark-mode-toggle" src="art/sun.png" alt="Toggle Dark Mode" style="cursor: pointer; width: 50px; height: 50px;">
-  </div>
+    </div>
     
     <script>
       const darkModeToggle = document.getElementById('dark-mode-toggle');
@@ -53,11 +53,12 @@
         <span id="hello-text">Hello</span>! This is <span id="name-text">Kaixiang</span>!
       </p>
       <p>
-        I am a first-year <a href="https://www.cs.cornell.edu/ms">M.S. student</a> in Computer Science at Cornell University, 
-        specializing in Natural Language Processing. My research focuses on studying and modeling conversational behaviors and social interactions. 
+        I am a first-year <a href="https://www.cs.cornell.edu/ms">M.S. student</a> in Computer Science at Cornell University. 
+        My research focuses on Natural Language Processing and Computational Social Science,
+        particularly on studying and modeling conversational behaviors and social interactions. 
         I am fortunate to be advised by 
         <a href="https://www.cs.cornell.edu/~cristian/">Prof. Cristian Danescu-Niculescu-Mizil</a> (CS Major) and 
-        <a href="https://www.cs.cornell.edu/home/llee/">Prof. Lillian Lee</a> (INFO SCI Minor).
+        <a href="https://www.cs.cornell.edu/home/llee/">Prof. Lillian Lee</a> (INFO SCI Minor) for my current MS study.
       </p>
       <script>
         const greetings = ["Bonjour", "你好", "Hola", "Guten Tag", "こんにちは", "안녕하세요", "Hello"];
@@ -85,28 +86,39 @@
 
     <h2>Bio</h2>
     <ul>
-      <li>Undergraduate in Computer Science && Mathematics @ Cornell University</li>
       <li>Master of Science in Computer Science @ Cornell University</li>
+      <li>Undergraduate in Computer Science &and; Mathematics @ Cornell University</li>
     </ul>
 
-    <h2>Experiences</h2>
+    <h2>Research</h2>
     <ul>
-      <li>Teaching Assistant @ <a href="https://www.cs.cornell.edu/courses/cs3780/2025sp/">SP25 CS 3/5780: Intro to Machine Learning</a></li>
+      <li>
+        <div class="paper-card">
+          <h5 style="margin: 0 0 4px 0;">Time is On My Side: Dynamics of Talk-Time Sharing in Video-chat Conversations [<a href="research/time.html">Page</a>]</h5>
+          <p style="margin: 0 0 4px 0; padding-left: 20px;">Proceedings of CSCW 2025</p>
+          <p style="margin: 0; padding-left: 20px;">Kaixiang Zhang, Justine Zhang, Cristian Danescu-Niculescu-Mizil</p>
+        </div>
+      </li>
+    </ul>
+
+    <h2>Things</h2>
+    <ul>
+      <li>Teaching Assistant @ SP25 <a href="https://www.cs.cornell.edu/courses/cs3780/2025sp/">CS 3/5780</a>: Intro to Machine Learning</li>
       <li>Developing @ <a href="https://convokit.cornell.edu/">ConvoKit</a>: Cornell Conversation Analysis Toolkit</li>
-      <li>Teaching Assistant @ <a href="https://courses.cs.cornell.edu/cs2112/2024fa/?info">FA24 CS 2112: Object-Oriented Design and Data Structures (Honors)</a></li>
+      <li>Teaching Assistant @ FA24 <a href="https://courses.cs.cornell.edu/cs2112/2024fa/?info">CS 2112</a>: Object-Oriented Design and Data Structures (Honors)</li>
       <li>Developed <a href="https://apps.apple.com/us/app/grow-grow-giraffe/id6499164856">Grow Grow Giraffe</a> @ Cornell Game Design - Gorges Games Studios</li>
-      <li>Teaching Assistant @ <a href="https://classes.cornell.edu/browse/roster/SP24/class/CS/4300">SP24 CS 4300: Language and Information</a></li>
-      <li>Teaching Assistant @ <a href="https://classes.cornell.edu/browse/roster/FA23/class/INFO/4350">FA23 INFO 4350: Conversations and Information</a></li>
+      <li>Teaching Assistant @ SP24 <a href="https://classes.cornell.edu/browse/roster/SP24/class/CS/4300">CS 4300</a>: Language and Information</li>
+      <li>Teaching Assistant @ FA23 <a href="https://classes.cornell.edu/browse/roster/FA23/class/INFO/4350">INFO 4350</a>: Conversations and Information</li>
       <li>Research and Development Summer Intern @ Baidu AIGC</li>
-      <li>Teaching Assistant @ <a href="https://classes.cornell.edu/browse/roster/SP23/class/CS/4300">SP23 CS 4300: Language and Information</a></li>
-      <li>Teaching Assistant @ <a href="https://classes.cornell.edu/browse/roster/FA22/class/CS/3410">FA22 CS 3410: Computer System Organization and Programming</a></li>
+      <li>Teaching Assistant @ SP23 <a href="https://classes.cornell.edu/browse/roster/SP23/class/CS/4300">CS 4300</a>: Language and Information</li>
+      <li>Teaching Assistant @ FA22 <a href="https://classes.cornell.edu/browse/roster/FA22/class/CS/3410">CS 3410</a>: Computer System Organization and Programming</li>
       <li>Research Assistant Summer Intern @ Baidu Research</li>
       <li>Product Manager Intern @ Lenovo Beijing Headquarter</li>
     </ul>
 
     <h2>Contact</h2>
     <ul>
-      <li>Email: <a href="mailto:kz88@cornell.edu">kz88</a></li>
+      <li>Email: kz88[at]cornell[dot]edu</a></li>
       <li>Github: <a href="https://github.com/seanzhangkx8">seanzhangkx8</a></li>
       <li>Location: <a href="https://maps.app.goo.gl/LcxgBWEBCPeDhT2a9">322 Gates Hall</a></li>
     </ul>
@@ -116,9 +128,13 @@
     <img src="image/seanzhangkx.png" alt="picture of sean, cr. Anastasia He.", width="256", style="display: block; margin-left: auto; margin-right: auto;">
     <p style="text-align: center;">Credit: Anastasia He</p>
 
-    <footer>
-      <p style="text-align: center;">&copy; 2025 Sean Zhang</p>
-      <p style="text-align: center;">All contents are created by me unless otherwise noted.</p>
-    </footer>
+    <div class="footnotes">
+      <p>1. &copy; <span id="year"></span> Sean Zhang</p>
+      <p id="fn2">2. This page is formatted with <a href="https://github.com/vincentdoerig/latex-css">LaTex.CSS</a></p>
+      <p id="fn3">3. All contents are created by me unless otherwise noted.</p>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </div>
   </body>
 </html>

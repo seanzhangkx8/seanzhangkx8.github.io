@@ -153,9 +153,13 @@
     <img src="image/sp23mexico/4.JPG" alt="Mexico Trip 4" width="400">
     <img src="image/sp23mexico/5.JPG" alt="Mexico Trip 5" width="400">
 
-    <footer>
-      <p style="text-align: center;">&copy; 2025 Sean Zhang</p>
-      <p style="text-align: center;">All images are taken by me unless otherwise noted.</p>
-    </footer>
+    <div class="footnotes">
+      <p>1. &copy; <span id="year"></span> Sean Zhang</p>
+      <p id="fn2">2. This page is formatted with <a href="https://github.com/vincentdoerig/latex-css">LaTex.CSS</a></p>
+      <p id="fn3">3. All contents are created by me unless otherwise noted.</p>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </div>
   </body>
 </html>
