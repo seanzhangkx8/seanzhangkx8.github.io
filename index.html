@@ -3,55 +3,35 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Kaixiang (Sean) Zhang</title>
+    <title>Kaixiang Zhang</title>
 
     <link rel="stylesheet" href="https://latex.vercel.app/style.css">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="image/kirby.png" type="image/x-icon">
 
     <style>
-      .dark-mode-toggle-container {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-      }
-
-      /* Styling for mobile devices */
-      @media (max-width: 650px) {
-          h1 {
-              margin-top: 100px; /* Push the title lower */
-          }
-        }
+      .dark-mode-toggle-container {position: absolute; top: 20px; right: 20px;}
+      @media (max-width: 650px) {h1 {margin-top: 100px;}}
     </style>
-
   </head>
+
   <body>
     <h1>Kaixiang (Sean) Zhang</h1>
 
     <div class="dark-mode-toggle-container">
       <img id="dark-mode-toggle" src="art/sun.png" alt="Toggle Dark Mode" style="cursor: pointer; width: 50px; height: 50px;">
     </div>
-    
     <script>
       const darkModeToggle = document.getElementById('dark-mode-toggle');
-    
       darkModeToggle.addEventListener('click', () => {
         document.body.classList.toggle('latex-dark');
-
-        if (document.body.classList.contains('latex-dark')) {
-          darkModeToggle.src = 'art/moon.png';
-        } else {
-          darkModeToggle.src = 'art/sun.png';
-        }
+        if (document.body.classList.contains('latex-dark')) {darkModeToggle.src = 'art/moon.png';} else {darkModeToggle.src = 'art/sun.png';}
       });
     </script>
 
     <div class="abstract">
       <h2>Abstract</h2>
-      
-      <p>
-        <span id="hello-text">Hello</span>! This is <span id="name-text">Kaixiang</span>!
-      </p>
+      <p><span id="hello-text">Hello</span>! This is <span id="name-text">Kaixiang</span>!</p>
       <p>
         I am a first-year <a href="https://www.cs.cornell.edu/ms">M.S. student</a> in Computer Science at Cornell University. 
         My research focuses on Natural Language Processing and Computational Social Science,
@@ -63,7 +43,6 @@
       <script>
         const greetings = ["Bonjour", "你好", "Hola", "Guten Tag", "こんにちは", "안녕하세요", "Hello"];
         let currentIndex = 0;
-
         function updateGreeting() {
             const textElement = document.getElementById("hello-text");
             textElement.textContent = greetings[currentIndex];
@@ -74,7 +53,6 @@
       <script>
         const names = ["Sean", "张垲翔", "seanzhangkx", "Kaixiang"];
         let currentIdx = 0;
-
         function updatename() {
             const textElement = document.getElementById("name-text");
             textElement.textContent = names[currentIdx];
@@ -101,7 +79,7 @@
       </li>
     </ul>
 
-    <h2>Things</h2>
+    <h2>Work</h2>
     <ul>
       <li>Teaching Assistant @ SP25 <a href="https://www.cs.cornell.edu/courses/cs3780/2025sp/">CS 3/5780</a>: Intro to Machine Learning</li>
       <li>Developing @ <a href="https://convokit.cornell.edu/">ConvoKit</a>: Cornell Conversation Analysis Toolkit</li>
