@@ -1,2 +1,2 @@
 # seanzhangkx.com
-Sean Zhang's Personal Website
+Sean Zhang's Website

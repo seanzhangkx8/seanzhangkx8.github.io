@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://latex.vercel.app/style.css">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="image/kirby.png" type="image/x-icon">
+    <link rel="icon" href="../image/kirby.png" type="image/x-icon">
 
     <style>
       .dark-mode-toggle-container {
@@ -24,8 +24,9 @@
   </head>
 
   <body>
-    <div class="dark-mode-toggle-container">
-      <img id="dark-mode-toggle" src="art/sun.png" alt="Toggle Dark Mode" style="cursor: pointer; width: 50px; height: 50px;">
+    <div class="dark-mode-toggle-container" style="position: absolute; top: 20px; right: 20px; display: flex; align-items: center; gap: 10px;">
+      <p style="margin: 0;"><a href="../index.html">Get Me Back!</a></p>
+      <img id="dark-mode-toggle" src="../art/sun.png" alt="Toggle Dark Mode" style="cursor: pointer; width: 50px; height: 50px;">
     </div>
     
     <script>
@@ -35,9 +36,9 @@
         document.body.classList.toggle('latex-dark');
 
         if (document.body.classList.contains('latex-dark')) {
-          darkModeToggle.src = 'art/moon.png';
+          darkModeToggle.src = '../art/moon.png';
         } else {
-          darkModeToggle.src = 'art/sun.png';
+          darkModeToggle.src = '../art/sun.png';
         }
       });
     </script>
