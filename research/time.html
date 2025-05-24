@@ -31,15 +31,15 @@
     
     <script>
       const darkModeToggle = document.getElementById('dark-mode-toggle');
-    
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('latex-dark');
+        darkModeToggle.src = '../art/moon.png';
+      }
       darkModeToggle.addEventListener('click', () => {
         document.body.classList.toggle('latex-dark');
-
-        if (document.body.classList.contains('latex-dark')) {
-          darkModeToggle.src = '../art/moon.png';
-        } else {
-          darkModeToggle.src = '../art/sun.png';
-        }
+        const isDark = document.body.classList.contains('latex-dark');
+        darkModeToggle.src = isDark ? '../art/moon.png' : '../art/sun.png';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
       });
     </script>
 
