@@ -12,6 +12,16 @@
     <style>
       .dark-mode-toggle-container {position: absolute; top: 20px; right: 20px;}
       @media (max-width: 650px) {h1 {margin-top: 100px;}}
+      
+      .co-first {
+      }
+      
+      .co-first::after {
+        content: "†";
+        font-size: 0.7em;
+        vertical-align: super;
+        margin-left: 2px;
+      }
     </style>
   </head>
 
@@ -79,7 +89,14 @@
     <ul>
       <li>
         <div class="paper-card">
-          <h5 style="margin: 0 0 4px 0;">Time is On My Side: Dynamics of Talk-Time Sharing in Video-chat Conversations [<a href="research/time.html">Page</a>]</h5>
+          <h5 style="margin: 0 0 4px 0;"><a href="research/condyns.html">A Similarity Measure for Comparing Conversational Dynamics</a></h5>
+          <p style="margin: 0 0 4px 0; padding-left: 20px;">Preprint</p>
+          <p style="margin: 0; padding-left: 20px;"><span class="co-first">Sang Min Jung</span>, <span class="co-first">Kaixiang Zhang</span>, Cristian Danescu-Niculescu-Mizil</p>
+        </div>
+      </li>
+      <li>
+        <div class="paper-card">
+          <h5 style="margin: 0 0 4px 0;"><a href="research/time.html">Time is On My Side: Dynamics of Talk-Time Sharing in Video-chat Conversations</a></h5>
           <p style="margin: 0 0 4px 0; padding-left: 20px;">Proceedings of CSCW 2025</p>
           <p style="margin: 0; padding-left: 20px;">Kaixiang Zhang, Justine Zhang, Cristian Danescu-Niculescu-Mizil</p>
         </div>
@@ -114,9 +131,10 @@
     <p style="text-align: center;">Credit: Anastasia He</p>
 
     <div class="footnotes">
-      <p>1. &copy; <span id="year"></span> Sean Zhang</p>
+      <p>1. &copy; <span id="year"></span> Kaixiang (Sean) Zhang 张垲翔</p>
       <p id="fn2">2. This page is formatted with <a href="https://github.com/vincentdoerig/latex-css">LaTex.CSS</a></p>
       <p id="fn3">3. All contents are created by me unless otherwise noted.</p>
+      <p id="fn4">4. † indicates co-first authorship</p>
       <script>
         document.getElementById("year").textContent = new Date().getFullYear();
       </script>
