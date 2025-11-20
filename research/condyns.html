@@ -20,10 +20,12 @@
               margin-top: 100px;
           }
         }
-      
+        .abstract p {
+          text-align: left;
+          text-indent: 2em;
+      }
       .co-first {
       }
-      
       .co-first::after {
         content: "†";
         font-size: 0.7em;
@@ -59,12 +61,12 @@
         <span style="margin: 0 15px;"><a href="http://www.seanzhangkx.com/"><span class="co-first">Kaixiang Zhang</span></a></span>
         <span style="margin: 0 15px;"><a href="https://www.cs.cornell.edu/~cristian/">Cristian Danescu-Niculescu-Mizil</a></span>
     </div>
-    <p style="text-align: center;">EMNLP 2025 (findings) [<a href="https://arxiv.org/abs/2507.18956">arXiv</a>]</p>
+    <p style="text-align: center;">EMNLP 2025 (findings) [<a href="https://aclanthology.org/2025.findings-emnlp.1327/">Paper Link</a>] [<a href="https://www.cs.cornell.edu/~cristian//pdfs/comparing_conversational_dynamics_poster.pdf">Poster</a>] [<a href="https://drive.google.com/file/d/1zbg4SplXEkJnfuyLJSu2c3OBpso859-Q/view?usp=sharing">Video</a>]</p>
 
     <div class="abstract">
         <h4>Abstract</h4>
         <p>The quality of a conversation goes beyond the individual quality of each reply, and instead emerges from how these combine into interactional patterns that give the conversation its distinctive overall "shape". However, there is no robust automated method for comparing conversations in terms of their overall interactional dynamics. Such methods could enhance the analysis of conversational data and help evaluate conversational agents more holistically.</p>
-        <p><br>In this work, we introduce a similarity measure for comparing conversations with respect to their dynamics. We design a validation framework for testing the robustness of the metric in capturing differences in conversation dynamics and for assessing its sensitivity to the topic of the conversations. Finally, to illustrate the measure's utility, we use it to analyze conversational dynamics in a large online community, bringing new insights into the role of situational power in conversations.</p>
+        <p>In this work, we introduce a similarity measure for comparing conversations with respect to their dynamics. We design a validation framework for testing the robustness of the metric in capturing differences in conversation dynamics and for assessing its sensitivity to the topic of the conversations. Finally, to illustrate the measure's utility, we use it to analyze conversational dynamics in a large online community, bringing new insights into the role of situational power in conversations.</p>
     </div>
 
     <img src="condyns.png" style="display: block; margin: auto;" loading="lazy" alt="condyns with different dynamics example" width="300" height="200">
@@ -72,7 +74,7 @@
         Who’s the better teacher---the friendly TA or the super‑knowledgeable AI? 
         While AI can ace facts, humans excel at guiding us to think. 
         This illustrates the conversational gap our paper tackles: how the dynamics of a conversation---not just its content---shape interaction outcomes and experience. 
-        Our work introduces ConDynS, a way to compare these dynamics, helping researchers understand and improve AI so it converses more like humans. 
+        But how do we compare the dynamics of two conversations? To learn more, check out our paper!
         (This image, made with ChatGPT, is not part of the original paper but just for fun here!)<br><br>
     </figcaption>
 
