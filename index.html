@@ -1,54 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Kaixiang Zhang</title>
 
-    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="image/kirby.png" type="image/x-icon">
-
-    <style>
-      .dark-mode-toggle-container {position: absolute; top: 20px; right: 20px;}
-      @media (max-width: 650px) {h1 {margin-top: 100px;}}
-      
-      .co-first {
-      }
-      
-      .co-first::after {
-        content: "†";
-        font-size: 0.7em;
-        vertical-align: super;
-        margin-left: 2px;
-      }
-    </style>
   </head>
 
   <body>
-    <h1>Kaixiang (Sean) Zhang</h1>
+    <h1 class="text-center">Kaixiang (Sean) Zhang</h1>
 
-    <div class="dark-mode-toggle-container">
-      <img id="dark-mode-toggle" src="art/sun.png" alt="Toggle Dark Mode" style="cursor: pointer; width: 50px; height: 50px;">
+    <div class="top-bar">
+      <img id="dark-mode-toggle" class="dark-mode-toggle" src="art/sun.png" alt="Toggle Dark Mode">
     </div>
-    
-    <script>
-      const darkModeToggle = document.getElementById('dark-mode-toggle');
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('latex-dark');
-        darkModeToggle.src = 'art/moon.png';
-      }
-      darkModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('latex-dark');
-        const isDark = document.body.classList.contains('latex-dark');
-        darkModeToggle.src = isDark ? 'art/moon.png' : 'art/sun.png';
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      });
-    </script>
 
     <div class="abstract">
-      <h2>Abstract</h2>
-      <p><span id="hello-text">Hello</span>! This is <span id="name-text">Kaixiang</span>!</p>
       <p>
         I am a second-year <a href="https://www.cs.cornell.edu/ms">M.S. student</a> in Computer Science at Cornell University. 
         My research focuses on Natural Language Processing and Computational Social Science,
@@ -57,89 +26,98 @@
         <a href="https://www.cs.cornell.edu/~cristian/">Prof. Cristian Danescu-Niculescu-Mizil</a> (CS Major) and 
         <a href="https://www.cs.cornell.edu/home/llee/">Prof. Lillian Lee</a> (INFO SCI Minor) for my current MS study.
       </p>
-      <script>
-        const greetings = ["Bonjour", "你好", "Hola", "Guten Tag", "こんにちは", "안녕하세요", "Hello"];
-        let currentIndex = 0;
-        function updateGreeting() {
-            const textElement = document.getElementById("hello-text");
-            textElement.textContent = greetings[currentIndex];
-            currentIndex = (currentIndex + 1) % greetings.length;
-        }
-        setInterval(updateGreeting, 3000);
-      </script>
-      <script>
-        const names = ["Sean", "张垲翔", "Kaixiang"];
-        let currentIdx = 0;
-        function updatename() {
-            const textElement = document.getElementById("name-text");
-            textElement.textContent = names[currentIdx];
-            currentIdx = (currentIdx + 1) % names.length;
-        }
-        setInterval(updatename, 3000);
-      </script>
+      <p>
+        > Master of Science in Computer Science @ <span class="abstract-school">Cornell University</span>
+        <br>
+        > Undergraduate in Computer Science &and; Mathematics @ <span class="abstract-school">Cornell University</span>
+      </p>
     </div>
 
-    <h2>Bio</h2>
-    <ul>
-      <li>Master of Science in Computer Science @ Cornell University</li>
-      <li>Undergraduate in Computer Science &and; Mathematics @ Cornell University</li>
-    </ul>
-
     <h2>Research</h2>
-    <ul>
-      <li>
-        <div class="paper-card">
-          <h5 style="margin: 0 0 4px 0;"><a href="research/condyns.html">A Similarity Measure for Comparing Conversational Dynamics</a></h5>
-          <p style="margin: 0 0 4px 0; padding-left: 20px;">EMNLP 2025 (findings)</p>
-          <p style="margin: 0; padding-left: 20px;"><span class="co-first">Sang Min Jung</span>, <span class="co-first">Kaixiang Zhang</span>, Cristian Danescu-Niculescu-Mizil</p>
+    <div class="paper-card">
+      <p><a href="research/condyns.html">A Similarity Measure for Comparing Conversational Dynamics</a></p>
+      <p>EMNLP 2025 (findings)</p>
+      <p><span class="co-first">Sang Min Jung</span>, <span class="co-first">Kaixiang Zhang</span>, Cristian Danescu-Niculescu-Mizil</p>
+    </div>
+    <div class="paper-card">
+      <p><a href="research/time.html">Time is On My Side: Dynamics of Talk-Time Sharing in Video-chat Conversations</a></p>
+      <p>CSCW 2025</p>
+      <p>Kaixiang Zhang, Justine Zhang, Cristian Danescu-Niculescu-Mizil</p>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="work-list work-timeline" id="work-timeline">
+      <div class="work-item">
+        <span class="work-badge work-badge--dev">Developing</span>
+        <span class="work-period">Present</span>
+        <span class="work-body"><a href="https://convokit.cornell.edu/">ConvoKit</a>: Cornell Conversation Analysis Toolkit</span>
+      </div>
+      <div class="work-item">
+        <span class="work-badge work-badge--ta">TA</span>
+        <span class="work-period">FA25 / SP26</span>
+        <span class="work-body"><a href="https://classes.cornell.edu/browse/roster/FA25/class/CS/4701">CS 4701</a>: Practicum in Artificial Intelligence</span>
+      </div>
+      <div class="work-item">
+        <span class="work-badge work-badge--ta">TA</span>
+        <span class="work-period">SP25</span>
+        <span class="work-body"><a href="https://www.cs.cornell.edu/courses/cs3780/2025sp/">CS 3/5780</a>: Intro to Machine Learning</span>
+      </div>
+      <div class="work-folded">
+        <div class="work-item">
+          <span class="work-badge work-badge--ta">TA</span>
+          <span class="work-period">FA24</span>
+          <span class="work-body"><a href="https://courses.cs.cornell.edu/cs2112/2024fa/?info">CS 2112</a>: Object-Oriented Design and Data Structures (Honors)</span>
         </div>
-      </li>
-      <li>
-        <div class="paper-card">
-          <h5 style="margin: 0 0 4px 0;"><a href="research/time.html">Time is On My Side: Dynamics of Talk-Time Sharing in Video-chat Conversations</a></h5>
-          <p style="margin: 0 0 4px 0; padding-left: 20px;">CSCW 2025</p>
-          <p style="margin: 0; padding-left: 20px;">Kaixiang Zhang, Justine Zhang, Cristian Danescu-Niculescu-Mizil</p>
+        <div class="work-item">
+          <span class="work-badge work-badge--intern">Intern</span>
+          <span class="work-period">SU23</span>
+          <span class="work-body">Baidu AIGC — Research and Development</span>
         </div>
-      </li>
-    </ul>
+        <div class="work-item">
+          <span class="work-badge work-badge--ta">TA</span>
+          <span class="work-period">FA23</span>
+          <span class="work-body"><a href="https://classes.cornell.edu/browse/roster/FA23/class/INFO/4350">INFO 4350</a>: Conversations and Information</span>
+        </div>
+        <div class="work-item">
+          <span class="work-badge work-badge--ta">TA</span>
+          <span class="work-period">SP23 / SP24</span>
+          <span class="work-body"><a href="https://classes.cornell.edu/browse/roster/SP23/class/CS/4300">CS 4300</a>: Language and Information</span>
+        </div>
+        <div class="work-item">
+          <span class="work-badge work-badge--ta">TA</span>
+          <span class="work-period">FA22</span>
+          <span class="work-body"><a href="https://classes.cornell.edu/browse/roster/FA22/class/CS/3410">CS 3410</a>: Computer System Organization and Programming</span>
+        </div>
+      </div>
+      <button type="button" class="work-unfold-btn" id="work-unfold-btn" aria-expanded="false" title="Show more">▼</button>
+    </div>
 
-    <h2>Work</h2>
-    <ul>
-      <li>Teaching Assistant @ FA25 <a href="https://classes.cornell.edu/browse/roster/FA25/class/CS/4701">CS 4701</a>: Practicum in Artificial Intelligence</li>
-      <li>Teaching Assistant @ SP25 <a href="https://www.cs.cornell.edu/courses/cs3780/2025sp/">CS 3/5780</a>: Intro to Machine Learning</li>
-      <li>Teaching Assistant @ FA24 <a href="https://courses.cs.cornell.edu/cs2112/2024fa/?info">CS 2112</a>: Object-Oriented Design and Data Structures (Honors)</li>
-      <li>Developed <a href="https://apps.apple.com/us/app/grow-grow-giraffe/id6499164856">Grow Grow Giraffe</a> @ Cornell Game Design - Gorges Games Studios</li>
-      <li>Teaching Assistant @ SP24 <a href="https://classes.cornell.edu/browse/roster/SP24/class/CS/4300">CS 4300</a>: Language and Information</li>
-      <li>Teaching Assistant @ FA23 <a href="https://classes.cornell.edu/browse/roster/FA23/class/INFO/4350">INFO 4350</a>: Conversations and Information</li>
-      <li>Research and Development Summer Intern @ Baidu AIGC</li>
-      <li>Teaching Assistant @ SP23 <a href="https://classes.cornell.edu/browse/roster/SP23/class/CS/4300">CS 4300</a>: Language and Information</li>
-      <li>Developing @ <a href="https://convokit.cornell.edu/">ConvoKit</a>: Cornell Conversation Analysis Toolkit</li>
-      <li>Teaching Assistant @ FA22 <a href="https://classes.cornell.edu/browse/roster/FA22/class/CS/3410">CS 3410</a>: Computer System Organization and Programming</li>
-      <li>Research Assistant Summer Intern @ Baidu Research</li>
-      <li>Product Manager Intern @ Lenovo Beijing Headquarter</li>
-    </ul>
+    <br><br>
 
-    <h2>Contact</h2>
-    <ul>
-      <li>Email: kz88[at]cornell[dot]edu</a></li>
-      <li>Github: <a href="https://github.com/seanzhangkx8">seanzhangkx8</a></li>
-      <li>Location: <a href="https://maps.app.goo.gl/LcxgBWEBCPeDhT2a9">349 Gates Hall</a></li>
-    </ul>
-
-    <h2>Me</h2>
-    <p><a href="fun.html">HAHA</a></p>
-    <img src="image/seanzhangkx.png" alt="picture of sean, cr. Anastasia He.", width="256", style="display: block; margin-left: auto; margin-right: auto;">
-    <p style="text-align: center;">Credit: Anastasia He</p>
-
-    <br>
+    <a href="fun.html" class="center-block">
+      <img src="image/seanzhangkx.png" alt="picture of sean, cr. Anastasia He." width="256" class="block-img">
+    </a>
+    <p class="text-center">Credit: Anastasia He</p>
+    <p class="text-center"><a href="mailto:kz88@cornell.edu">Email</a> & <a href="https://github.com/seanzhangkx8">GitHub</a></p>
 
     <div class="footnotes">
       <p>1. &copy; <span id="year"></span> Kaixiang (Sean) Zhang 张垲翔</p>
-      <p id="fn2">2. This page is formatted with <a href="https://github.com/vincentdoerig/latex-css">LaTex.CSS</a></p>
-      <p id="fn3">3. All contents are created by me unless otherwise noted.</p>
-      <p id="fn4">4. † indicates co-first authorship</p>
+      <p id="fn4">2. † indicates co-first authorship</p>
+      <script>window.PAGE_BASE = "";</script>
+      <script src="js/common.js"></script>
+      <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
       <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
+        (function () {
+          var list = document.getElementById("work-timeline");
+          var btn = document.getElementById("work-unfold-btn");
+          if (!list || !btn) return;
+          btn.addEventListener("click", function () {
+            var expanded = list.classList.toggle("work-expanded");
+            btn.setAttribute("aria-expanded", expanded);
+            btn.textContent = expanded ? "▲" : "▼";
+            btn.setAttribute("title", expanded ? "Show less" : "Show more");
+          });
+        })();
       </script>
     </div>
   </body>
