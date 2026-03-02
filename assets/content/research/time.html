@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Time is On My Side: Dynamics of Talk-Time Sharing in Video-chat
+      Conversations · Kaixiang Zhang
+    </title>
+    <link rel="stylesheet" href="../../../src/styles.css" />
+    <link rel="icon" href="../../img/kirby.png" type="image/png" />
+    <link rel="preload" as="image" href="../../img/name.png" />
+  </head>
+  <body>
+    <div id="app">
+      <header id="header" class="is-visible">
+        <img id="headerName" src="../../img/name.png" alt="Kaixiang Zhang" />
+      </header>
+
+      <div id="paper-content">
+        <header class="paper-header">
+          <h2 class="paper-title">
+            Time is On My Side: Dynamics of Talk-Time Sharing in Video-chat
+            Conversations
+          </h2>
+          <p class="paper-meta">CSCW 2025</p>
+          <p class="paper-authors">
+            <a href="../bio.html" class="paper-author">Kaixiang Zhang</a>,
+            <a href="https://tisjune.github.io/" class="paper-author"
+              >Justine Zhang</a
+            >,
+            <a
+              href="https://www.cs.cornell.edu/~cristian/"
+              class="paper-author"
+              >Cristian Danescu-Niculescu-Mizil</a
+            >
+          </p>
+          <p class="paper-links">
+            <a
+              href="https://doi.org/10.1145/3757511"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Paper</a
+            >
+          </p>
+        </header>
+
+        <section class="abstract">
+          <h3>Abstract</h3>
+          <p>
+            An intrinsic aspect of every conversation is the way talk-time is
+            shared between multiple speakers. Conversations can be balanced,
+            with each speaker claiming a similar amount of talk-time, or
+            imbalanced when one talks disproportionately. Such overall
+            distributions are the consequence of continuous negotiations between
+            the speakers throughout the conversation: who should be talking at
+            every point in time, and for how long?
+          </p>
+          <p>
+            In this work we introduce a computational framework for quantifying
+            both the conversation-level distribution of talk-time between
+            speakers, as well as the lower-level dynamics that lead to it. We
+            derive a typology of talk-time sharing dynamics structured by
+            several intuitive axes of variation. By applying this framework to a
+            large dataset of video-chats between strangers, we confirm that,
+            perhaps unsurprisingly, different conversation-level distributions
+            of talk-time are perceived differently by speakers, with balanced
+            conversations being preferred over imbalanced ones, especially by
+            those who end up talking less. Then we reveal that—even when they
+            lead to the same level of overall balance—different types of
+            talk-time sharing dynamics are perceived differently by the
+            participants, highlighting the relevance of our newly introduced
+            typology. Finally, we discuss how our framework offers new tools to
+            designers of computer-mediated communication platforms, for both
+            human-human and human-AI communication.
+          </p>
+        </section>
+
+        <p class="paper-footnote">
+          &copy; <span id="year-time"></span> Kaixiang (Sean) Zhang 张垲翔.
+        </p>
+      </div>
+
+      <div class="return-container">
+        <a href="../research.html" class="return-btn">Back to Research</a>
+      </div>
+    </div>
+    <script>
+      document.getElementById("year-time").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>

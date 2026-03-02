@@ -1,124 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kaixiang Zhang</title>
-
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="image/kirby.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="icon" href="assets/img/kirby.png" type="image/png" />
+    <link rel="preload" as="image" href="assets/img/west-lake.png" />
+    <link rel="preload" as="image" href="assets/img/name.png" />
+    <link rel="preload" as="image" href="assets/img/baoshu.png" />
+    <link rel="preload" as="image" href="assets/img/hehua.png" />
+    <link rel="preload" as="image" href="assets/img/ting.png" />
+    <link rel="preload" as="image" href="assets/img/santan.png" />
   </head>
-
   <body>
-    <h1 class="text-center">Kaixiang (Sean) Zhang</h1>
+    <div id="app">
+      <div id="lake-container">
+        <img id="lake" src="assets/img/west-lake.png" alt="West Lake" />
 
-    <div class="top-bar">
-      <img id="dark-mode-toggle" class="dark-mode-toggle" src="art/sun.png" alt="Toggle Dark Mode">
-    </div>
-
-    <div class="abstract">
-      <p>
-        I am a second-year <a href="https://www.cs.cornell.edu/ms">M.S. student</a> in Computer Science at Cornell University. 
-        My research focuses on Natural Language Processing and Computational Social Science,
-        particularly on studying and modeling conversational behaviors and social interactions. 
-        I am fortunate to be advised by 
-        <a href="https://www.cs.cornell.edu/~cristian/">Prof. Cristian Danescu-Niculescu-Mizil</a> (CS Major) and 
-        <a href="https://www.cs.cornell.edu/home/llee/">Prof. Lillian Lee</a> (INFO SCI Minor) for my current MS study.
-      </p>
-      <p>
-        > Master of Science in Computer Science @ <span class="abstract-school">Cornell University</span>
-        <br>
-        > Undergraduate in Computer Science &and; Mathematics @ <span class="abstract-school">Cornell University</span>
-      </p>
-    </div>
-
-    <h2>Research</h2>
-    <div class="paper-card">
-      <p><a href="research/condyns.html">A Similarity Measure for Comparing Conversational Dynamics</a></p>
-      <p>EMNLP 2025 (findings)</p>
-      <p><span class="co-first">Sang Min Jung</span>, <span class="co-first">Kaixiang Zhang</span>, Cristian Danescu-Niculescu-Mizil</p>
-    </div>
-    <div class="paper-card">
-      <p><a href="research/time.html">Time is On My Side: Dynamics of Talk-Time Sharing in Video-chat Conversations</a></p>
-      <p>CSCW 2025</p>
-      <p>Kaixiang Zhang, Justine Zhang, Cristian Danescu-Niculescu-Mizil</p>
-    </div>
-
-    <h2>Experience</h2>
-    <div class="work-list work-timeline" id="work-timeline">
-      <div class="work-item">
-        <span class="work-badge work-badge--dev">Developing</span>
-        <span class="work-period">Present</span>
-        <span class="work-body"><a href="https://convokit.cornell.edu/">ConvoKit</a>: Cornell Conversation Analysis Toolkit</span>
+        <!-- Map markers overlayed on the lake (full-size buttons) -->
+        <button
+          class="marker marker-baoshu"
+          type="button"
+          aria-label="保俶塔"
+          data-page="Bio"
+        ></button>
+        <button
+          class="marker marker-hehua"
+          type="button"
+          aria-label="曲院风荷"
+          data-page="Research"
+        ></button>
+        <button
+          class="marker marker-ting"
+          type="button"
+          aria-label="集贤亭"
+          data-page="Fun"
+        ></button>
+        <button
+          class="marker marker-santan"
+          type="button"
+          aria-label="三潭印月"
+          data-page="Projects"
+        ></button>
       </div>
-      <div class="work-item">
-        <span class="work-badge work-badge--ta">TA</span>
-        <span class="work-period">FA25 / SP26</span>
-        <span class="work-body"><a href="https://classes.cornell.edu/browse/roster/FA25/class/CS/4701">CS 4701</a>: Practicum in Artificial Intelligence</span>
+
+      <!-- Landing: name + start button -->
+      <div id="landingUI">
+        <img id="landingName" src="assets/img/name.png" alt="Kaixiang Zhang" />
+        <button id="startBtn" type="button">Enter</button>
       </div>
-      <div class="work-item">
-        <span class="work-badge work-badge--ta">TA</span>
-        <span class="work-period">SP25</span>
-        <span class="work-body"><a href="https://www.cs.cornell.edu/courses/cs3780/2025sp/">CS 3/5780</a>: Intro to Machine Learning</span>
-      </div>
-      <div class="work-folded">
-        <div class="work-item">
-          <span class="work-badge work-badge--ta">TA</span>
-          <span class="work-period">FA24</span>
-          <span class="work-body"><a href="https://courses.cs.cornell.edu/cs2112/2024fa/?info">CS 2112</a>: Object-Oriented Design and Data Structures (Honors)</span>
-        </div>
-        <div class="work-item">
-          <span class="work-badge work-badge--intern">Intern</span>
-          <span class="work-period">SU23</span>
-          <span class="work-body">Baidu AIGC — Research and Development</span>
-        </div>
-        <div class="work-item">
-          <span class="work-badge work-badge--ta">TA</span>
-          <span class="work-period">FA23</span>
-          <span class="work-body"><a href="https://classes.cornell.edu/browse/roster/FA23/class/INFO/4350">INFO 4350</a>: Conversations and Information</span>
-        </div>
-        <div class="work-item">
-          <span class="work-badge work-badge--ta">TA</span>
-          <span class="work-period">SP23 / SP24</span>
-          <span class="work-body"><a href="https://classes.cornell.edu/browse/roster/SP23/class/CS/4300">CS 4300</a>: Language and Information</span>
-        </div>
-        <div class="work-item">
-          <span class="work-badge work-badge--ta">TA</span>
-          <span class="work-period">FA22</span>
-          <span class="work-body"><a href="https://classes.cornell.edu/browse/roster/FA22/class/CS/3410">CS 3410</a>: Computer System Organization and Programming</span>
-        </div>
-      </div>
-      <button type="button" class="work-unfold-btn" id="work-unfold-btn" aria-expanded="false" title="Show more">▼</button>
+
+      <!-- Map view: header (shown after Start) -->
+      <header id="header">
+        <img id="headerName" src="assets/img/name.png" alt="Kaixiang Zhang" />
+      </header>
+
     </div>
-
-    <br><br>
-
-    <a href="fun.html" class="center-block">
-      <img src="image/seanzhangkx.png" alt="picture of sean, cr. Anastasia He." width="256" class="block-img">
-    </a>
-    <p class="text-center">Credit: Anastasia He</p>
-    <p class="text-center"><a href="mailto:kz88@cornell.edu">Email</a> & <a href="https://github.com/seanzhangkx8">GitHub</a></p>
-
-    <div class="footnotes">
-      <p>1. &copy; <span id="year"></span> Kaixiang (Sean) Zhang 张垲翔</p>
-      <p id="fn4">2. † indicates co-first authorship</p>
-      <script>window.PAGE_BASE = "";</script>
-      <script src="js/common.js"></script>
-      <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-      <script>
-        (function () {
-          var list = document.getElementById("work-timeline");
-          var btn = document.getElementById("work-unfold-btn");
-          if (!list || !btn) return;
-          btn.addEventListener("click", function () {
-            var expanded = list.classList.toggle("work-expanded");
-            btn.setAttribute("aria-expanded", expanded);
-            btn.textContent = expanded ? "▲" : "▼";
-            btn.setAttribute("title", expanded ? "Show less" : "Show more");
-          });
-        })();
-      </script>
-    </div>
+    <script src="src/main.js" defer></script>
   </body>
 </html>
