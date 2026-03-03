@@ -184,10 +184,17 @@ body.map-active .marker {
   font-size: 0.875rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  background: #e8f3ff; /* very light blue */
+  background: #e8f3ff;
   color: #0f172a;
   cursor: pointer;
   transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+button,
+.return-btn,
+.marker::after {
+  font-family: "Irish Grover", system-ui, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 #startBtn:hover {
@@ -445,4 +452,29 @@ body.map-active .marker {
   margin-top: 1.25rem;
   font-size: 0.8rem;
   color: #64748b;
+}
+
+/* Typography helpers for content pages */
+
+.research-page h2,
+.research-page h3,
+.research-page p {
+  font-family: "Gelasio", system-ui, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.paper-page h2,
+.paper-page h3,
+.paper-page p {
+  font-family: "Gelasio", system-ui, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.bio-page {
+  font-family: "Irish Grover", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.bio-accent {
+  color: red;
 }

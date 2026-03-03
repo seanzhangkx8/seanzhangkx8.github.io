@@ -1,5 +1,3 @@
-const START_DURATION = 600;
-
 function runMapTransition() {
   const landingUI = document.getElementById("landingUI");
   const header = document.getElementById("header");
