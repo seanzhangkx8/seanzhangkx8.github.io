@@ -27,15 +27,55 @@ body {
   justify-content: center;
 }
 
-/* Lake: 80% of viewport height, centered */
+/* Paper pages (e.g. time.html, condyns.html): allow scroll when content is long */
+body.paper-page {
+  overflow: auto;
+}
+
+.paper-page #app {
+  position: relative;
+  min-height: 100vh;
+  display: block;
+  padding-bottom: 2rem;
+}
+
+/* Research overview page: allow scroll for long list of papers */
+body.research-page {
+  overflow: auto;
+}
+
+.research-page #app {
+  position: relative;
+  min-height: 100vh;
+  display: block;
+  padding-bottom: 2rem;
+}
+
+/* Research page header: make name image part of flow so it doesn't overlap content */
+.research-page #header {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 1rem auto 1.5rem;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.research-page #research-content {
+  margin-top: 0;
+}
+
+/* Lake: fixed large size, centered; overflow hidden so sides clip on small screens */
 #lake-container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 80vh;
-  max-height: 80vh;
+  height: 100%;
+  min-height: 80vh;
+  overflow: hidden;
   transition: height 350ms ease, max-height 350ms ease;
 }
 
@@ -44,9 +84,12 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  max-width: 100%;
+  /* Fixed large size; may overflow viewport */
+  min-width: 1200px;
+  width: 1200px;
+  min-height: 720px;
   height: 80vh;
-  max-height: 80vh;
+  max-height: 90vh;
   object-fit: contain;
   object-position: center;
   transition: transform 350ms ease;
@@ -54,12 +97,13 @@ body {
 }
 
 body.map-active #lake-container {
-  height: 90vh;
-  max-height: 90vh;
+  min-height: 90vh;
 }
 
 body.map-active #lake {
   transform: translate(-50%, -50%) scale(1.05);
+  height: 90vh;
+  max-height: 90vh;
 }
 
 /* Markers aligned with the lake image */
@@ -149,6 +193,140 @@ body.map-active .marker {
   left: 45%;
 }
 
+/* Mobile: index page – lake fixed size (sides overflow); 4 buttons vertical stack in center */
+@media (max-width: 768px) {
+  #lake-container {
+    min-height: 100vh;
+  }
+
+  #lake {
+    min-width: 2000px;
+    width: 2000px;
+    min-height: 1200px;
+    height: 115vh;
+    max-height: none;
+  }
+
+  body.map-active #lake {
+    height: 115vh;
+    transform: translate(-50%, -50%) scale(1.25);
+  }
+
+  /* Stack markers vertically in the center; spread out */
+  body.map-active #lake-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+  }
+
+  body.map-active .marker {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+  }
+
+  body.map-active .marker::after {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  /* Landing UI mobile */
+  #landingName {
+    width: 100vw;
+    max-width: 110vw;
+    max-height: 40vh;
+  }
+
+  #landingUI {
+    gap: 1.5rem;
+  }
+
+  #startBtn {
+    padding: 0.55rem 1.3rem;
+    font-size: 0.8rem;
+  }
+
+  /* Header mobile: name image exactly centered */
+  #header {
+    top: 0.75rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    transform: none;
+  }
+
+  .paper-page #header {
+    position: relative;
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: 0.75rem auto 1.25rem;
+  }
+
+  .paper-page #paper-content {
+    margin-top: 0;
+  }
+
+  #headerName {
+    max-height: 2rem;
+  }
+
+  /* Bio page mobile: content readable, lake same fixed overflow; allow scroll if needed */
+  .bio-page #lake-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+  }
+
+  .bio-page #bio-content {
+    max-width: 90vw;
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    text-align: left;
+    transform: none;
+  }
+
+  /* Return button mobile */
+  .return-container {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .return-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.75rem;
+  }
+
+  /* Research / paper content mobile */
+  #research-content,
+  #paper-content {
+    max-width: 92vw;
+    padding: 1.2rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .paper-card {
+    padding: 0.75rem 1rem;
+  }
+
+  .paper-title {
+    font-size: 0.95rem;
+  }
+}
+
 /* Landing UI: name + start button, centered */
 #landingUI {
   position: absolute;
@@ -174,6 +352,14 @@ body.map-active .marker {
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+/* Override for mobile so the name is much larger before entering */
+@media (max-width: 768px) {
+  #landingName {
+    max-width: 90vw;
+    max-height: 35vh;
+  }
 }
 
 #startBtn {
@@ -229,9 +415,20 @@ button,
   object-fit: contain;
 }
 
+.research-page #header,
+.paper-page #header {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 1.25rem auto 1.75rem;
+  pointer-events: auto;
+  opacity: 1;
+}
+
 /* Islands are disabled for now; kept here for future use */
 
-/* Bio page content over the lake */
+/* Bio page content over the lake – desktop tilted */
 #bio-content {
   position: relative;
   z-index: 2;
@@ -240,8 +437,8 @@ button,
   color: #0f172a;
   font-size: 0.95rem;
   line-height: 1.6;
-  transform: translate(10%, -28%) rotate(-30deg);
-  transform-origin: center;
+  transform: translate(80px, -50px) rotate(-30deg);
+  transform-origin: center center;
 }
 
 #bio-content p {
@@ -265,6 +462,7 @@ button,
   color: #0f172a;
   font-size: 0.95rem;
   line-height: 1.7;
+  margin: 0 auto 1.5rem;
 }
 
 #research-content h2 {
@@ -291,6 +489,40 @@ button,
   bottom: 1.5rem;
   transform: translateX(-50%);
   z-index: 3;
+}
+
+@media (min-width: 769px) {
+  .research-page .return-container,
+  .paper-page .return-container {
+    position: static;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin: 0.5rem auto 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.site-footer {
+  padding: 1.5rem 0 2.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.paper-page .site-footer,
+.research-page .site-footer {
+  font-family: "Gelasio", system-ui, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.bio-page .return-container {
+  position: static;
+  transform: none;
+  margin-top: 2.5em;
+  display: flex;
+  justify-content: center;
 }
 
 .return-btn {
@@ -390,6 +622,7 @@ button,
   color: #0f172a;
   font-size: 0.95rem;
   line-height: 1.7;
+  margin: 0 auto 1.5rem;
 }
 
 .paper-header {
